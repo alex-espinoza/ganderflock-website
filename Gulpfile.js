@@ -9,20 +9,23 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
-    server: './'
+    server: {
+      baseDir: './',
+      directory: true
+    }
   });
 
-  gulp.watch("sass/*.sass", ['sass']);
-  gulp.watch("./*.html").on('change', browserSync.reload);
+  gulp.watch('sass/*.sass', ['sass']);
+  gulp.watch('html/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {
   var processors = [
     cssnext,
-    cssnano
+    //cssnano
   ];
 
-  return gulp.src('sass/**/*.sass')
+  return gulp.src('sass/*.sass')
           .pipe(sass().on('error', sass.logError))
           .pipe(postcss(processors))
           .pipe(gulp.dest('./css/'))
