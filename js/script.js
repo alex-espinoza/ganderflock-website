@@ -55,16 +55,16 @@ function startIntroduction() {
     var currentDateString = new Date().toString().split(" ").slice(0, -2).join(" ");
     firstTerminalLine += currentDateString;
     terminal.innerHTML += firstTerminalLine;
-  }, 2800);
+  }, 3300);
 
   setTimeout(function() {
     setupStartupTerminalOutput();
-  }, 4800);
+  }, 5800);
 }
 
 function setupStartupTerminalOutput() {
   terminal.insertAdjacentHTML("beforeend", "<br>");
-  var timesToDuplicate = 5;
+  var timesToDuplicate = 3;
   terminalOutputArray = duplicateTerminalLines([], timesToDuplicate);
 
   runTerminalOutput(terminalOutputArray, 0)
