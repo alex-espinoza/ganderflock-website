@@ -12,7 +12,8 @@ gulp.task('serve', ['sass'], function() {
     server: {
       baseDir: './',
       directory: true
-    }
+    },
+    ghostMode: false
   });
 
   gulp.watch('sass/*.sass', ['sass']);
