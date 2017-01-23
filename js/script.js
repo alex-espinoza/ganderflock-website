@@ -37,18 +37,23 @@ function whichAnimationEndEvent(){
 
 var startButton = document.querySelector(".start-button");
 var terminal = document.querySelector(".terminal");
+var introductionContainer = document.querySelector("#introduction-container");
+var introductionFadeOverlay = document.querySelector("#introduction-fade-overlay");
+var blockContainer = document.querySelector("#block-container");
+var logoContainer = document.querySelector("#logo-container");
 var transitionEndEvent = whichTransitionEndEvent();
 var animationEndEvent = whichAnimationEndEvent();
 
 startButton.addEventListener("click", function() {
+  startButton.addEventListener(transitionEndEvent, function() {
+    startIntroduction();
+  }, {once: true});
+
   startButton.className += " hide";
-  startButton.addEventListener(transitionEndEvent, startIntroduction());
 });
 
 function startIntroduction() {
-  setTimeout(function() {
-    terminal.className += " show";
-  }, 1300);
+  terminal.className += " show";
 
   setTimeout(function() {
     var firstTerminalLine = "Booting up: ";
@@ -98,7 +103,24 @@ function runTerminalOutput(terminalOutputArray, counter) {
       terminal.innerHTML += "Welcome to Ganderflock";
       window.scrollTo(0, document.body.scrollHeight);
     }, 2000);
+
+    setTimeout(function() {
+      introductionFadeOverlay.addEventListener(transitionEndEvent, function() {
+        introductionEndFadeStepOne();
+      }, {once: true});
+      introductionFadeOverlay.className += " transitioning";
+    }, 4500)
   }
+}
+
+function introductionEndFadeStepOne() {
+  introductionContainer.className += " hide";
+  blockContainer.className = "";
+  logoContainer.className = "";
+
+  setTimeout(function() {
+    introductionFadeOverlay.className = "";
+  }, 2000);
 }
 
 var terminalLines = [

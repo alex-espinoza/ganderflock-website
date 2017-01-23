@@ -84,6 +84,8 @@ html, body {
             animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear; }
+  #introduction-container.hide {
+    display: none; }
 
 #introduction-container .start-button {
   position: absolute;
@@ -124,13 +126,30 @@ html, body {
   -webkit-animation: terminal-cursor 1s infinite;
           animation: terminal-cursor 1s infinite; }
 
+#introduction-fade-overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s; }
+  #introduction-fade-overlay.transitioning {
+    opacity: 1; }
+  #introduction-fade-overlay.done {
+    display: none; }
+
 #block-container {
-  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #efefef;
   z-index: 1; }
+  #block-container.hide {
+    display: none; }
 
 #block-container .block {
   position: absolute;
@@ -273,7 +292,6 @@ html, body {
   opacity: 1; }
 
 #logo-container {
-  display: none;
   position: absolute;
   padding: 20px;
   top: 46%;
@@ -282,6 +300,8 @@ html, body {
           transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 2; }
+  #logo-container.hide {
+    display: none; }
   #logo-container h1 {
     font-family: Arial, sans-serif;
     font-size: 124px;
