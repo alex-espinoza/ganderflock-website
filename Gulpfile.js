@@ -9,6 +9,10 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
+    port: 8080,
+    ui: {
+      port: 8081
+    },
     server: {
       baseDir: './',
       directory: true
