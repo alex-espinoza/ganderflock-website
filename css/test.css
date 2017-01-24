@@ -100,8 +100,8 @@ html, body {
   box-shadow: 1px 1px 10px #fff, inset 1px 1px 10px #fff;
   cursor: pointer;
   opacity: 1;
-  -webkit-transition: opacity 1.3s;
-  transition: opacity 1.3s; }
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms; }
   #introduction-container .start-button.hide {
     opacity: 0;
     pointer-events: none; }
@@ -135,8 +135,8 @@ html, body {
   z-index: 10;
   pointer-events: none;
   opacity: 0;
-  -webkit-transition: opacity 3s;
-  transition: opacity 3s; }
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s; }
   #introduction-fade-overlay.transitioning {
     opacity: 1; }
   #introduction-fade-overlay.done {

@@ -60,16 +60,16 @@ function startIntroduction() {
     var currentDateString = new Date().toString().split(" ").slice(0, -2).join(" ");
     firstTerminalLine += currentDateString;
     terminal.innerHTML += firstTerminalLine;
-  }, 3300);
+  }, 1000);
 
   setTimeout(function() {
     setupStartupTerminalOutput();
-  }, 5800);
+  }, 2200);
 }
 
 function setupStartupTerminalOutput() {
   terminal.insertAdjacentHTML("beforeend", "<br>");
-  var timesToDuplicate = 3;
+  var timesToDuplicate = 2;
   terminalOutputArray = duplicateTerminalLines([], timesToDuplicate);
 
   runTerminalOutput(terminalOutputArray, 0)
@@ -102,14 +102,14 @@ function runTerminalOutput(terminalOutputArray, counter) {
       terminal.insertAdjacentHTML("beforeend", "<br>");
       terminal.innerHTML += "Welcome to Ganderflock";
       window.scrollTo(0, document.body.scrollHeight);
-    }, 2000);
+    }, 1000);
 
     setTimeout(function() {
       introductionFadeOverlay.addEventListener(transitionEndEvent, function() {
         introductionEndFadeStepOne();
       }, {once: true});
       introductionFadeOverlay.className += " transitioning";
-    }, 4500)
+    }, 2000)
   }
 }
 
@@ -120,7 +120,7 @@ function introductionEndFadeStepOne() {
 
   setTimeout(function() {
     introductionFadeOverlay.className = "";
-  }, 2000);
+  }, 1000);
 }
 
 var terminalLines = [
