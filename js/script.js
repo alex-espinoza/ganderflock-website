@@ -36,9 +36,31 @@ function whichAnimationEndEvent(){
 }
 
 var blockContainer = document.querySelector("#block-container");
+var topLeftBlock = document.querySelector("#block-container .block.top-left");
+var topRightBlock = document.querySelector("#block-container .block.top-right");
+var bottomLeftBlock = document.querySelector("#block-container .block.bottom-left");
+var bottomRightBlock = document.querySelector("#block-container .block.bottom-right");
 var logoContainer = document.querySelector("#logo-container");
+var creativeSection = document.querySelector("#creative-section");
 var transitionEndEvent = whichTransitionEndEvent();
 var animationEndEvent = whichAnimationEndEvent();
+
+topLeftBlock.addEventListener("click", function() {
+  blockContainer.classList.add("section-transition-top-left");
+});
+
+topRightBlock.addEventListener("click", function() {
+  blockContainer.classList.add("section-transition-top-right");
+  creativeSection.classList.add("active");
+});
+
+bottomLeftBlock.addEventListener("click", function() {
+  blockContainer.classList.add("section-transition-bottom-left");
+});
+
+bottomRightBlock.addEventListener("click", function() {
+  blockContainer.classList.add("section-transition-bottom-right");
+});
 
 // startButton.addEventListener("click", function() {
 //   startButton.addEventListener(transitionEndEvent, function() {
