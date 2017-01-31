@@ -25,8 +25,8 @@ body.no-scroll {
     z-index: 3;
     -webkit-transition: opacity 200ms;
     transition: opacity 200ms;
-    -webkit-transition-delay: 800ms;
-            transition-delay: 800ms; }
+    -webkit-transition-delay: 900ms;
+            transition-delay: 900ms; }
 
 #block-container .block.top-left {
   top: 0;
@@ -245,8 +245,8 @@ body.no-scroll {
   z-index: 3;
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
-  -webkit-transition-delay: 800ms;
-          transition-delay: 800ms; }
+  -webkit-transition-delay: 900ms;
+          transition-delay: 900ms; }
   #logo-container h1 {
     font-family: Arial, sans-serif;
     font-size: 124px;
