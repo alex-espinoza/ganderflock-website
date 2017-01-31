@@ -35,12 +35,14 @@ function whichAnimationEndEvent(){
   }
 }
 
+var bodyElement = document.querySelector("body");
 var blockContainer = document.querySelector("#block-container");
 var topLeftBlock = document.querySelector("#block-container .block.top-left");
 var topRightBlock = document.querySelector("#block-container .block.top-right");
 var bottomLeftBlock = document.querySelector("#block-container .block.bottom-left");
 var bottomRightBlock = document.querySelector("#block-container .block.bottom-right");
 var logoContainer = document.querySelector("#logo-container");
+var goBackLogoElement = document.querySelector(".go-back-logo");
 var creativeSection = document.querySelector("#creative-section");
 var transitionEndEvent = whichTransitionEndEvent();
 var animationEndEvent = whichAnimationEndEvent();
@@ -52,6 +54,7 @@ topLeftBlock.addEventListener("click", function() {
 topRightBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-top-right");
   creativeSection.classList.add("active");
+  bodyElement.classList.remove("no-scroll");
 });
 
 bottomLeftBlock.addEventListener("click", function() {
@@ -60,6 +63,12 @@ bottomLeftBlock.addEventListener("click", function() {
 
 bottomRightBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-bottom-right");
+});
+
+goBackLogoElement.addEventListener("click", function() {
+  creativeSection.classList.remove("active");
+  blockContainer.classList.remove("section-transition-top-right");
+  bodyElement.classList.add("no-scroll");
 });
 
 // startButton.addEventListener("click", function() {
