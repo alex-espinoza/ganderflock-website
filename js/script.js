@@ -71,6 +71,38 @@ goBackLogoElement.addEventListener("click", function() {
   bodyElement.classList.add("no-scroll");
 });
 
+// ScrollMagic
+
+var creativeSectionHeroVideoElement = document.querySelector("#creative-section .hero-video");
+var creativeSectionImageOneElement = document.querySelector("#creative-section .images-container .image.one");
+var creativeSectionImageTwoElement = document.querySelector("#creative-section .images-container .image.two");
+var creativeSectionImageThreeElement = document.querySelector("#creative-section .images-container .image.three");
+var creativeSectionImageFourElement = document.querySelector("#creative-section .images-container .image.four");
+
+var tweenTimeline = new TimelineMax();
+tweenTimeline.add([
+  TweenMax.to(creativeSectionImageOneElement, 1, {y:-200}),
+  TweenMax.to(creativeSectionImageTwoElement, 1, {y:-150}),
+  TweenMax.to(creativeSectionImageThreeElement, 1, {y:-200}),
+  TweenMax.to(creativeSectionImageFourElement, 1, {y:-150}),
+  // TweenMax.to(creativeSectionImagesMoveLessElements, 1, {y:-150})
+]);
+
+var controller = new ScrollMagic.Controller({
+  globalSceneOptions: {
+    triggerHook: 'onLeave'
+  },
+  addIndicators: false
+});
+
+new ScrollMagic.Scene({
+  triggerElement: creativeSectionHeroVideoElement,
+  duration: 700
+})
+.setTween(tweenTimeline)
+// .addIndicators({name: "image parallax"})
+.addTo(controller);
+
 // startButton.addEventListener("click", function() {
 //   startButton.addEventListener(transitionEndEvent, function() {
 //     startIntroduction();

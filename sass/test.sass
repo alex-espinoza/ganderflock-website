@@ -306,6 +306,7 @@ body.no-scroll
 
 #creative-section .images-container
   width: 80%
+  min-height: 1200px
   margin: 0 auto
   opacity: 0
   transform: translateY(20px)
@@ -313,6 +314,7 @@ body.no-scroll
   transition-delay: 300ms, 300ms
 
   .image
+    position: relative
     float: left
     width: 48%
     height: auto
@@ -322,6 +324,38 @@ body.no-scroll
     background-size: cover
     background-position: 50% 50%
     background-repeat: no-repeat
+
+  .image.one .overlay
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(249, 223, 147, 0.25)
+    width: 100%
+    height: 100%
+
+  .image.two .overlay
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(167, 206, 151, 0.25)
+    width: 100%
+    height: 100%
+
+  .image.three .overlay
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(152, 200, 202, 0.25)
+    width: 100%
+    height: 100%
+
+  .image.four .overlay
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(217, 123, 144, 0.25)
+    width: 100%
+    height: 100%
 
 #creative-section.active .images-container
   opacity: 1
