@@ -228,9 +228,13 @@ body.no-scroll
     font-size: 124px
     line-height: 146px
 
-#creative-section
+#web-design-section,
+#creative-section,
+#social-media-section,
+#team-section
   visibility: hidden
-  position: relative
+  position: absolute
+  width: 100%
   opacity: 0
   pointer-events: none
   z-index: 2
@@ -244,7 +248,10 @@ body.no-scroll
     transition: opacity 1ms, visibility 1ms
     transition-delay: 800ms, 800ms
 
-#creative-section .go-back-logo
+#web-design-section .go-back-logo,
+#creative-section .go-back-logo,
+#social-media-section .go-back-logo,
+#team-section .go-back-logo
   position: absolute
   top: 10px
   right: 20px
@@ -257,13 +264,19 @@ body.no-scroll
   transition: transform 200ms, opacity 200ms
   transition-delay: 0ms, 0ms
 
-#creative-section.active .go-back-logo
+#web-design-section.active .go-back-logo,
+#creative-section.active .go-back-logo,
+#social-media-section.active .go-back-logo,
+#team-section.active .go-back-logo
   opacity: 1
   transform: translateY(0px)
   transition: transform 200ms, opacity 200ms
   transition-delay: 1000ms, 1000ms
 
-#creative-section .header
+#web-design-section .header,
+#creative-section .header,
+#social-media-section .header,
+#team-section .header
   position: relative
   padding: 20px 0 0 20px
   z-index: 2
@@ -277,14 +290,20 @@ body.no-scroll
     transition: transform 200ms, opacity 200ms
     transition-delay: 100ms, 100ms
 
-#creative-section.active .header
+#web-design-section.active .header,
+#creative-section.active .header,
+#social-media-section.active .header,
+#team-section.active .header
   h1
     opacity: 1
     transform: translateY(25px)
     transition: transform 200ms, opacity 200ms
     transition-delay: 1100ms, 1100ms
 
-#creative-section .hero-video
+#web-design-section .hero-video,
+#creative-section .hero-video,
+#social-media-section .hero-video,
+#team-section .hero-video
   position: relative
   width: 100%
   height: 400px
@@ -298,13 +317,19 @@ body.no-scroll
   transition: transform 200ms, opacity 200ms
   transition-delay: 200ms, 200ms
 
-#creative-section.active .hero-video
+#web-design-section.active .hero-video,
+#creative-section.active .hero-video,
+#social-media-section.active .hero-video,
+#team-section.active .hero-video
   opacity: 1
   transform: translateY(0px)
   transition: transform 200ms, opacity 200ms
   transition-delay: 1200ms, 1200ms
 
-#creative-section .images-container
+#web-design-section .images-container,
+#creative-section .images-container,
+#social-media-section .images-container,
+#team-section .images-container
   width: 80%
   min-height: 1200px
   margin: 0 auto
@@ -357,7 +382,10 @@ body.no-scroll
     width: 100%
     height: 100%
 
-#creative-section.active .images-container
+#web-design-section.active .images-container,
+#creative-section.active .images-container,
+#social-media-section.active .images-container,
+#team-section.active .images-container
   opacity: 1
   transform: translateY(0px)
   transition: transform 200ms, opacity 200ms

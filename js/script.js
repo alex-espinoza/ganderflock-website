@@ -42,13 +42,18 @@ var topRightBlock = document.querySelector("#block-container .block.top-right");
 var bottomLeftBlock = document.querySelector("#block-container .block.bottom-left");
 var bottomRightBlock = document.querySelector("#block-container .block.bottom-right");
 var logoContainer = document.querySelector("#logo-container");
-var goBackLogoElement = document.querySelector(".go-back-logo");
+var webDesignSection = document.querySelector("#web-design-section");
 var creativeSection = document.querySelector("#creative-section");
+var socialMediaSection = document.querySelector("#social-media-section");
+var teamSection = document.querySelector("#team-section");
+var goBackLogoElements = Array.from(document.querySelectorAll(".go-back-logo"));
 var transitionEndEvent = whichTransitionEndEvent();
 var animationEndEvent = whichAnimationEndEvent();
 
 topLeftBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-top-left");
+  webDesignSection.classList.add("active");
+  bodyElement.classList.remove("no-scroll");
 });
 
 topRightBlock.addEventListener("click", function() {
@@ -59,16 +64,28 @@ topRightBlock.addEventListener("click", function() {
 
 bottomLeftBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-bottom-left");
+  socialMediaSection.classList.add("active");
+  bodyElement.classList.remove("no-scroll");
 });
 
 bottomRightBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-bottom-right");
+  teamSection.classList.add("active");
+  bodyElement.classList.remove("no-scroll");
 });
 
-goBackLogoElement.addEventListener("click", function() {
-  creativeSection.classList.remove("active");
-  blockContainer.classList.remove("section-transition-top-right");
-  bodyElement.classList.add("no-scroll");
+goBackLogoElements.forEach(function(logoElement) {
+  logoElement.addEventListener("click", function() {
+    webDesignSection.classList.remove("active");
+    creativeSection.classList.remove("active");
+    socialMediaSection.classList.remove("active");
+    teamSection.classList.remove("active");
+    blockContainer.classList.remove("section-transition-top-right");
+    blockContainer.classList.remove("section-transition-top-left");
+    blockContainer.classList.remove("section-transition-bottom-left");
+    blockContainer.classList.remove("section-transition-bottom-right");
+    bodyElement.classList.add("no-scroll");
+  });
 });
 
 // ScrollMagic

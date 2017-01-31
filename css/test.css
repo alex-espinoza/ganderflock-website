@@ -252,9 +252,13 @@ body.no-scroll {
     font-size: 124px;
     line-height: 146px; }
 
-#creative-section {
+#web-design-section,
+#creative-section,
+#social-media-section,
+#team-section {
   visibility: hidden;
-  position: relative;
+  position: absolute;
+  width: 100%;
   opacity: 0;
   pointer-events: none;
   z-index: 2;
@@ -262,7 +266,10 @@ body.no-scroll {
   transition: opacity 1ms, visibility 1ms;
   -webkit-transition-delay: 400ms, 400ms;
           transition-delay: 400ms, 400ms; }
-  #creative-section.active {
+  #web-design-section.active,
+  #creative-section.active,
+  #social-media-section.active,
+  #team-section.active {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
@@ -271,7 +278,10 @@ body.no-scroll {
     -webkit-transition-delay: 800ms, 800ms;
             transition-delay: 800ms, 800ms; }
 
-#creative-section .go-back-logo {
+#web-design-section .go-back-logo,
+#creative-section .go-back-logo,
+#social-media-section .go-back-logo,
+#team-section .go-back-logo {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -289,7 +299,10 @@ body.no-scroll {
   -webkit-transition-delay: 0ms, 0ms;
           transition-delay: 0ms, 0ms; }
 
-#creative-section.active .go-back-logo {
+#web-design-section.active .go-back-logo,
+#creative-section.active .go-back-logo,
+#social-media-section.active .go-back-logo,
+#team-section.active .go-back-logo {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -300,11 +313,17 @@ body.no-scroll {
   -webkit-transition-delay: 1000ms, 1000ms;
           transition-delay: 1000ms, 1000ms; }
 
-#creative-section .header {
+#web-design-section .header,
+#creative-section .header,
+#social-media-section .header,
+#team-section .header {
   position: relative;
   padding: 20px 0 0 20px;
   z-index: 2; }
-  #creative-section .header h1 {
+  #web-design-section .header h1,
+  #creative-section .header h1,
+  #social-media-section .header h1,
+  #team-section .header h1 {
     color: #000;
     font-family: Arial, sans-serif;
     font-size: 72px;
@@ -318,7 +337,10 @@ body.no-scroll {
     -webkit-transition-delay: 100ms, 100ms;
             transition-delay: 100ms, 100ms; }
 
-#creative-section.active .header h1 {
+#web-design-section.active .header h1,
+#creative-section.active .header h1,
+#social-media-section.active .header h1,
+#team-section.active .header h1 {
   opacity: 1;
   -webkit-transform: translateY(25px);
           transform: translateY(25px);
@@ -329,7 +351,10 @@ body.no-scroll {
   -webkit-transition-delay: 1100ms, 1100ms;
           transition-delay: 1100ms, 1100ms; }
 
-#creative-section .hero-video {
+#web-design-section .hero-video,
+#creative-section .hero-video,
+#social-media-section .hero-video,
+#team-section .hero-video {
   position: relative;
   width: 100%;
   height: 400px;
@@ -348,7 +373,10 @@ body.no-scroll {
   -webkit-transition-delay: 200ms, 200ms;
           transition-delay: 200ms, 200ms; }
 
-#creative-section.active .hero-video {
+#web-design-section.active .hero-video,
+#creative-section.active .hero-video,
+#social-media-section.active .hero-video,
+#team-section.active .hero-video {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -359,7 +387,10 @@ body.no-scroll {
   -webkit-transition-delay: 1200ms, 1200ms;
           transition-delay: 1200ms, 1200ms; }
 
-#creative-section .images-container {
+#web-design-section .images-container,
+#creative-section .images-container,
+#social-media-section .images-container,
+#team-section .images-container {
   width: 80%;
   min-height: 1200px;
   margin: 0 auto;
@@ -372,7 +403,10 @@ body.no-scroll {
   transition: transform 200ms, opacity 200ms, -webkit-transform 200ms;
   -webkit-transition-delay: 300ms, 300ms;
           transition-delay: 300ms, 300ms; }
-  #creative-section .images-container .image {
+  #web-design-section .images-container .image,
+  #creative-section .images-container .image,
+  #social-media-section .images-container .image,
+  #team-section .images-container .image {
     position: relative;
     float: left;
     width: 48%;
@@ -383,28 +417,40 @@ body.no-scroll {
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat; }
-  #creative-section .images-container .image.one .overlay {
+  #web-design-section .images-container .image.one .overlay,
+  #creative-section .images-container .image.one .overlay,
+  #social-media-section .images-container .image.one .overlay,
+  #team-section .images-container .image.one .overlay {
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(249, 223, 147, 0.25);
     width: 100%;
     height: 100%; }
-  #creative-section .images-container .image.two .overlay {
+  #web-design-section .images-container .image.two .overlay,
+  #creative-section .images-container .image.two .overlay,
+  #social-media-section .images-container .image.two .overlay,
+  #team-section .images-container .image.two .overlay {
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(167, 206, 151, 0.25);
     width: 100%;
     height: 100%; }
-  #creative-section .images-container .image.three .overlay {
+  #web-design-section .images-container .image.three .overlay,
+  #creative-section .images-container .image.three .overlay,
+  #social-media-section .images-container .image.three .overlay,
+  #team-section .images-container .image.three .overlay {
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(152, 200, 202, 0.25);
     width: 100%;
     height: 100%; }
-  #creative-section .images-container .image.four .overlay {
+  #web-design-section .images-container .image.four .overlay,
+  #creative-section .images-container .image.four .overlay,
+  #social-media-section .images-container .image.four .overlay,
+  #team-section .images-container .image.four .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -412,7 +458,10 @@ body.no-scroll {
     width: 100%;
     height: 100%; }
 
-#creative-section.active .images-container {
+#web-design-section.active .images-container,
+#creative-section.active .images-container,
+#social-media-section.active .images-container,
+#team-section.active .images-container {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
