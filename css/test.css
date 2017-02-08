@@ -52,13 +52,13 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(249, 223, 147, 0.25);
+    background-color: rgba(249, 223, 147, .25);
     width: 100%;
     height: 100%;
     -webkit-transition: background-color 500ms;
     transition: background-color 500ms; }
   #block-container .block.top-left .gif:hover::before {
-    background-color: rgba(249, 223, 147, 0.5); }
+    background-color: rgba(249, 223, 147, .5); }
 
 #block-container.section-transition-top-left .block.top-left::after {
   -webkit-transition: opacity 200ms;
@@ -99,13 +99,13 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(167, 206, 151, 0.25);
+    background-color: rgba(167, 206, 151, .25);
     width: 100%;
     height: 100%;
     -webkit-transition: background-color 500ms;
     transition: background-color 500ms; }
   #block-container .block.top-right .gif:hover::before {
-    background-color: rgba(167, 206, 151, 0.5); }
+    background-color: rgba(167, 206, 151, .5); }
 
 #block-container.section-transition-top-right .block.top-right::after {
   -webkit-transition: opacity 200ms;
@@ -146,13 +146,13 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(152, 200, 202, 0.25);
+    background-color: rgba(152, 200, 202, .25);
     width: 100%;
     height: 100%;
     -webkit-transition: background-color 500ms;
     transition: background-color 500ms; }
   #block-container .block.bottom-left .gif:hover::before {
-    background-color: rgba(152, 200, 202, 0.5); }
+    background-color: rgba(152, 200, 202, .5); }
 
 #block-container.section-transition-bottom-left .block.bottom-left::after {
   -webkit-transition: opacity 200ms;
@@ -193,13 +193,13 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(217, 123, 144, 0.25);
+    background-color: rgba(217, 123, 144, .25);
     width: 100%;
     height: 100%;
     -webkit-transition: background-color 500ms;
     transition: background-color 500ms; }
   #block-container .block.bottom-right .gif:hover::before {
-    background-color: rgba(217, 123, 144, 0.5); }
+    background-color: rgba(217, 123, 144, .5); }
 
 #block-container.section-transition-bottom-right .block.bottom-right::after {
   -webkit-transition: opacity 200ms;
@@ -292,7 +292,7 @@ h1, h2 {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
-    overflow: scroll;
+    overflow-y: scroll;
     -webkit-transition: opacity 200ms, visibility 200ms, overflow 200ms;
     transition: opacity 200ms, visibility 200ms, overflow 200ms;
     -webkit-transition-delay: 800ms, 800ms, 800ms;
@@ -382,7 +382,7 @@ h1, h2 {
   width: 100%;
   height: 400px;
   margin: 0 0 40px 0;
-  background-image: url("/images/creative-background-2.jpg");
+  background-image: url("/images/placeholder-header.png");
   background-size: cover;
   background-position: 50% 40%;
   background-repeat: no-repeat;
@@ -414,8 +414,9 @@ h1, h2 {
 #creative-section .images-container,
 #social-media-section .images-container,
 #team-section .images-container {
+  position: relative;
   width: 80%;
-  min-height: 1200px;
+  min-height: 1000px;
   margin: 0 auto;
   opacity: 0;
   -webkit-transform: translateY(20px);
@@ -426,6 +427,13 @@ h1, h2 {
   transition: transform 200ms, opacity 200ms, -webkit-transform 200ms;
   -webkit-transition-delay: 300ms, 300ms;
           transition-delay: 300ms, 300ms; }
+  #web-design-section .images-container:after,
+  #creative-section .images-container:after,
+  #social-media-section .images-container:after,
+  #team-section .images-container:after {
+    content: "";
+    display: table;
+    clear: both; }
   #web-design-section .images-container .image,
   #creative-section .images-container .image,
   #social-media-section .images-container .image,
@@ -447,7 +455,7 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(249, 223, 147, 0.25);
+    background-color: rgba(249, 223, 147, .25);
     width: 100%;
     height: 100%; }
   #web-design-section .images-container .image.two .overlay,
@@ -457,7 +465,7 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(167, 206, 151, 0.25);
+    background-color: rgba(167, 206, 151, .25);
     width: 100%;
     height: 100%; }
   #web-design-section .images-container .image.three .overlay,
@@ -467,7 +475,7 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(152, 200, 202, 0.25);
+    background-color: rgba(152, 200, 202, .25);
     width: 100%;
     height: 100%; }
   #web-design-section .images-container .image.four .overlay,
@@ -477,7 +485,7 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(217, 123, 144, 0.25);
+    background-color: rgba(217, 123, 144, .25);
     width: 100%;
     height: 100%; }
 
@@ -494,3 +502,18 @@ h1, h2 {
   transition: transform 200ms, opacity 200ms, -webkit-transform 200ms;
   -webkit-transition-delay: 1300ms, 1300ms;
           transition-delay: 1300ms, 1300ms; }
+
+#web-design-section .footer,
+#creative-section .footer,
+#social-media-section .footer,
+#team-section .footer {
+  position: relative;
+  width: 100%;
+  background: #000; }
+  #web-design-section .footer p,
+  #creative-section .footer p,
+  #social-media-section .footer p,
+  #team-section .footer p {
+    padding: 40px 20px;
+    font-size: 20px;
+    color: #fff; }
