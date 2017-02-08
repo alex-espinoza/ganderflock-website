@@ -96,7 +96,10 @@ goBackLogoElements.forEach(function(logoElement) {
     blockContainer.classList.remove("section-transition-top-left");
     blockContainer.classList.remove("section-transition-bottom-left");
     blockContainer.classList.remove("section-transition-bottom-right");
-    bodyElement.classList.add("no-scroll");
+
+    setTimeout(function() {
+      bodyElement.classList.add("no-scroll");
+    }, 900);
   });
 });
 
