@@ -262,8 +262,8 @@ body.no-scroll {
   opacity: 0;
   pointer-events: none;
   z-index: 2;
-  -webkit-transition: opacity 1ms, visibility 1ms;
-  transition: opacity 1ms, visibility 1ms;
+  -webkit-transition: opacity 200ms, visibility 200ms;
+  transition: opacity 200ms, visibility 200ms;
   -webkit-transition-delay: 400ms, 400ms;
           transition-delay: 400ms, 400ms; }
   #web-design-section.active,
@@ -273,8 +273,8 @@ body.no-scroll {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
-    -webkit-transition: opacity 1ms, visibility 1ms;
-    transition: opacity 1ms, visibility 1ms;
+    -webkit-transition: opacity 200ms, visibility 200ms;
+    transition: opacity 200ms, visibility 200ms;
     -webkit-transition-delay: 800ms, 800ms;
             transition-delay: 800ms, 800ms; }
 
