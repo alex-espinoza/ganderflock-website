@@ -1,6 +1,3 @@
-body.no-scroll {
-  overflow: hidden; }
-
 #block-container {
   position: fixed;
   width: 100%;
@@ -273,15 +270,17 @@ body.no-scroll {
 #social-media-section,
 #team-section {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   width: 100%;
+  height: 100%;
   opacity: 0;
   pointer-events: none;
   z-index: 2;
-  -webkit-transition: opacity 200ms, visibility 200ms;
-  transition: opacity 200ms, visibility 200ms;
-  -webkit-transition-delay: 700ms, 700ms;
-          transition-delay: 700ms, 700ms; }
+  overflow: hidden;
+  -webkit-transition: opacity 200ms, visibility 200ms, overflow 200ms;
+  transition: opacity 200ms, visibility 200ms, overflow 200ms;
+  -webkit-transition-delay: 700ms, 700ms, 700ms;
+          transition-delay: 700ms, 700ms, 700ms; }
   #web-design-section.active,
   #creative-section.active,
   #social-media-section.active,
@@ -289,10 +288,11 @@ body.no-scroll {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
-    -webkit-transition: opacity 200ms, visibility 200ms;
-    transition: opacity 200ms, visibility 200ms;
-    -webkit-transition-delay: 800ms, 800ms;
-            transition-delay: 800ms, 800ms; }
+    overflow: scroll;
+    -webkit-transition: opacity 200ms, visibility 200ms, overflow 200ms;
+    transition: opacity 200ms, visibility 200ms, overflow 200ms;
+    -webkit-transition-delay: 800ms, 800ms, 800ms;
+            transition-delay: 800ms, 800ms, 800ms; }
 
 #web-design-section .go-back-logo,
 #creative-section .go-back-logo,

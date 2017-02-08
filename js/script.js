@@ -53,37 +53,21 @@ var animationEndEvent = whichAnimationEndEvent();
 topLeftBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-top-left");
   webDesignSection.classList.add("active");
-
-  setTimeout(function() {
-    bodyElement.classList.remove("no-scroll");
-  }, 1000);
 });
 
 topRightBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-top-right");
   creativeSection.classList.add("active");
-
-  setTimeout(function() {
-    bodyElement.classList.remove("no-scroll");
-  }, 1000);
 });
 
 bottomLeftBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-bottom-left");
   socialMediaSection.classList.add("active");
-
-  setTimeout(function() {
-    bodyElement.classList.remove("no-scroll");
-  }, 1000);
 });
 
 bottomRightBlock.addEventListener("click", function() {
   blockContainer.classList.add("section-transition-bottom-right");
   teamSection.classList.add("active");
-
-  setTimeout(function() {
-    bodyElement.classList.remove("no-scroll");
-  }, 1000);
 });
 
 goBackLogoElements.forEach(function(logoElement) {
@@ -96,10 +80,6 @@ goBackLogoElements.forEach(function(logoElement) {
     blockContainer.classList.remove("section-transition-top-left");
     blockContainer.classList.remove("section-transition-bottom-left");
     blockContainer.classList.remove("section-transition-bottom-right");
-
-    setTimeout(function() {
-      bodyElement.classList.add("no-scroll");
-    }, 900);
   });
 });
 
